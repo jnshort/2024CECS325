@@ -1,0 +1,12 @@
+Generating 1000000 random numbers
+Starting system sort
+
+real	0m1.514s
+user	0m1.377s
+sys	0m0.048s
+
+Starting mysort
+
+real	75m33.226s
+user	75m9.391s
+sys	0m5.073s

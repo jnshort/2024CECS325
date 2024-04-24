@@ -36,6 +36,7 @@ public:
   Card deal();
   void display();
   void shuffle();
+  bool isEmpty();
 };
 
 // Line Break Function
@@ -194,6 +195,10 @@ Deck::Deck() {
   }
 }
 
+// Returns true of the deck is empty
+// otherwise returns false
+bool Deck::isEmpty() { return (top == 52); }
+
 // Displays the entire deck at once
 // in a user readable format
 void Deck::display() {
@@ -212,9 +217,9 @@ void Deck::display() {
 // Deal the top card of the deck
 // update index of top
 Card Deck::deal() {
-  if (top == 52) {
+  if (isEmpty()) {
     top = 0;    // Reset top of pile
-    throw('e');  // Throw error so main knows to shuffle
+    throw('e'); // Throw error so main knows to shuffle
   }
   Card top_card = pile[top];
   top++;
